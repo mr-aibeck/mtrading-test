@@ -1,0 +1,33 @@
+@import '../../styles/variables.sass'
+
+.input
+  background: $light-color
+  border: 1px solid $widget-border
+  border-radius: 4px
+  color: $dark-purple
+  font-weight: 600
+  font-size: 14px
+  font-family: 'Open Sans', sans-serif
+  line-height: 20px
+  height: 40px
+  letter-spacing: -0.3px
+  padding: 0 16px
+
+  &::placeholder
+    color: $note-color
+
+  &_with-note::after
+    margin-left: -10px
+
+  &_is-error
+    background: $error-color
+    border: 1px solid $error-light-color
+
+  &__error-label
+    color: $error-text-color
+    font-size: 12px
+    font-weight: normal
+    line-height: 20px
+    letter-spacing: -0.3px
+    flex-basis: 100%
+    margin-top: 4px

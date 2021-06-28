@@ -1,0 +1,77 @@
+@import '../../styles/variables.sass'
+
+.checkbox
+  align-items: center
+  display: flex
+
+  &__box
+    position: relative
+    outline: none
+    display: flex
+    flex-shrink: 0
+    align-items: center
+    width: 20px
+    height: 20px
+    background: $light-color
+    border-radius: 3px
+    box-sizing: border-box
+    box-shadow: inset 0 0 0 1px $widget-border
+    margin-right: 12px
+    transition: box-shadow .15s ease-in-out
+
+    &_is-error
+      background: $error-color
+      box-shadow: inset 0 0 0 1px $error-light-color
+
+  &__error-label
+    color: $error-text-color
+    font-size: 12px
+    font-weight: normal
+    line-height: 20px
+    letter-spacing: -0.3px
+    margin: 4px 0 0 32px
+
+  &__marker
+    height: 100%
+    width: 100%
+    opacity: 0
+    position: relative
+    background-color: transparent
+    z-index: 2
+    pointer-events: none
+    opacity: 0
+    transition: opacity .2s
+
+    &::after
+      content: ""
+      display: block
+      background-image: url("data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABQAAAAUCAYAAACNiR0NAAAACXBIWXMAAAsTAAALEwEAmpwYAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAEZSURBVHgBzZM9TgJBFMf/b5YxlngErSz1Bg7W3mEp0MJC7YxoxEKNFbGVAriDpcgeYU9gvIHbD8zz7SoJISwZdrfgV8xHZvLLvI8hCM+N3r0jvpRlHcVIiGhw89G6oqdGr8t/stI45gfF4BAVoYguFKhwmMuoK1RMMSHjuzoho2mdPpRVXF4osvbn6aATNRM71WYtIYMiGZJF2WyrA9v1FkorDW9HLQNnTSZdkD0ev/VlCr2Fk+lW1ujt6DyWfO36ynKFumbHnaN+1p9pvnxluUIJ8WBe6itLIbnI+aeI7USb/wKE8KC28jR9aWB/sAYb8vVWCuebtzyJcopfUREOGAbjr/fI7J3sEGNfqrqNIkiU8rCXu9HZ9S+mGXDZnTNVmgAAAABJRU5ErkJggg==")
+      width: 100%
+      height: 100%
+      position: absolute
+      transform: rotate(0)
+      transition: transform .3s cubic-bezier(0,0,.12,1),-webkit-transform .3s cubic-bezier(0,0,.12,1)
+
+  &__control
+    margin: 0
+    padding: 0
+    opacity: 0
+    height: 100%
+    width: 100%
+    // pointer-events: none
+    position: absolute
+    left: 0
+    top: 0
+
+  &__label
+    cursor: pointer
+    font-weight: normal
+    font-size: 14px
+    line-height: 20px
+
+  &__link
+    margin: 0 5px
+
+.checkbox__control:checked + .checkbox__input + .checkbox__marker
+  border-radius: 3px
+  opacity: 1

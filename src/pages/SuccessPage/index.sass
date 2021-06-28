@@ -1,0 +1,43 @@
+@import '../../styles/variables.sass'
+
+.success
+  align-items: center
+  display: flex
+  flex-direction: column
+  justify-content: center
+  margin: auto
+
+  &__icon
+    align-items: center
+    background: $success-color
+    border-radius: 100em
+    display: flex
+    justify-content: center
+    height: 72px
+    width: 72px
+
+  &__title
+    color: $black-color
+    font-style: normal
+    font-weight: 600
+    font-size: 32px
+    line-height: 44px
+    margin: 16px 0
+
+  &__details
+    align-items: center
+    color: $gray-color
+    display: flex
+    flex-direction: column
+    font-weight: 400
+    font-size: 16px
+    line-height: 24px
+    margin-bottom: 32px
+
+  &__amount
+    color: $dark-color
+    font-weight: 600
+    margin: 0 5px
+
+  &__button
+    padding: 0 20px

@@ -1,0 +1,90 @@
+@import '../../styles/variables.sass'
+
+.select
+  display: flex
+  flex-direction: column
+  position: relative
+
+  &__title
+    align-items: center
+    background: $light-color
+    border: 1px solid $widget-border
+    border-radius: 4px
+    color: $dark-purple
+    cursor: pointer
+    display: flex
+    font-weight: 600
+    font-size: 14px
+    font-family: 'Open Sans', sans-serif
+    line-height: 20px
+    height: 42px
+    padding: 0 16px
+
+    &_is-open
+      background: $white-color
+
+      &::after
+        transform: rotate(180deg)
+
+    &::after
+      content: ""
+      position: absolute
+      right: 16px
+      top: 18px
+      width: 0
+      height: 0
+      border-style: solid
+      border-width: 6px 5px 0 5px
+      border-color: $primary-color transparent transparent transparent
+      transition: transform ease-in-out 0.2s
+
+  &__list
+    background: $white-color
+    border: 1px solid $widget-border
+    border-radius: 0 0 4px 4px
+    overflow: hidden
+    padding: 0 16px
+    position: absolute
+    top: 40px
+    left: 0px
+    z-index: 1
+    width: 100%
+
+  &__list-item
+    align-items: center
+    border-top: 1px solid $dropdown-color
+    color: $dark-purple
+    cursor: pointer
+    display: flex
+    justify-content: flex-start
+    position: relative
+    height: 40px
+    width: 100%
+
+    &:first-of-type
+      border-top: none
+
+  &__list-item:hover::after
+    content: ""
+    background: rgba($secondary-color, 0.2)
+    border-top: 1px solid $dropdown-color
+    border-bottom: 1px solid $dropdown-color
+    height: 100%
+    left: -16px
+    right: -16px
+    top: -1px
+    bottom: 1px
+    position: absolute
+
+  &__list-currency
+    font-weight: 400
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: -0.3px
+    margin-right: 8px
+
+  &__list-amount
+    font-weight: 600
+    font-size: 14px
+    line-height: 20px
+    letter-spacing: -0.3px

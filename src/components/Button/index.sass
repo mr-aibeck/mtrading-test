@@ -1,0 +1,43 @@
+@import '../../styles/variables.sass'
+
+.button
+  align-items: center
+  border-radius: 3px
+  border: none
+  font-weight: bold
+  font-size: 14px
+  line-height: 20px
+  cursor: pointer
+  height: 40px
+  display: flex
+  justify-content: center
+
+  &_primary
+    background: $primary-color
+    color: $white-color
+
+    &:hover
+      background: rgba($primary-color, 0.8)
+
+  &_secondary
+    background: $secondary-color
+    color: $primary-color
+
+    &:hover
+      background: rgba($secondary-color, 0.8)
+
+  &:disabled
+    background: $disabled-color
+    cursor: default
+    color: $disabled-text-color
+
+  &_note
+    background: $light-color
+    font-size: 12px
+    width: 40px
+
+    &:hover
+      background: rgba($light-color, 0.9)
+
+  &_wide
+    flex-grow: 1

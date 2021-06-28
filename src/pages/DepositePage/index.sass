@@ -1,0 +1,156 @@
+@import '../../styles/mixins.sass'
+@import '../../styles/variables.sass'
+
+// FORM
+
+.title
+  color: $text-general
+  font-size: 28px
+  font-weight: 600
+  line-height: 38px
+
+  @include tablet
+    display: flex
+    justify-content: center
+
+.form
+  align-items: flex-start
+  background: $white-color
+  border-radius: 6px
+  display: flex
+  flex-grow: 1
+  justify-content: space-between
+  margin: 24px 0
+  padding: 16px
+
+  @include tablet
+    flex-grow: 0
+    padding: 24px
+
+  @include mobile
+    align-items: center
+    flex-direction: column
+    padding: 18px
+
+  &__field-item
+    display: flex
+    flex-direction: column
+    margin-top: 16px
+    position: relative
+
+    &__note
+      color: $dark-purple
+      cursor: pointer
+      position: absolute
+      right: 16px
+      top: 38px
+      font-weight: bold
+      font-size: 12px
+      line-height: 20px
+
+  &__field-calc
+    display: flex
+    font-weight: normal
+    font-size: 14px
+    line-height: 22px
+    margin-top: 4px
+
+    li
+      color: rgba($black-color, 0.42)
+      margin-right: 27px
+
+      &:last-child
+        margin-right: 0
+
+    &__result
+      color: $dark-color
+      font-weight: 600
+      margin-left: 8px
+
+  &__methods
+    display: flex
+    flex-wrap: wrap
+    justify-content: space-between
+    width: 372px
+
+    @include tablet
+      margin-right: 24px
+
+    @include mobile
+      margin-right: 0
+      flex-direction: column
+      width: 100%
+
+
+  &__fields
+    display: flex
+    flex-direction: column
+    width: 565px
+
+    @include tablet
+      width: 100%
+
+  &__label
+    color: $text-default
+    font-weight: bold
+    font-size: 12px
+    line-height: 20px
+    margin-bottom: 8px
+    margin-top: 16px
+
+    &:first-of-type
+      margin-top: 0
+
+    &_wide
+      flex-basis: 100%
+
+  &__methods-radio
+    height: 0
+    width: 0
+    opacity: 0
+
+  &__methods-item
+    align-items: center
+    border: 1px solid $light-gray
+    border-radius: 6px
+    cursor: pointer
+    display: flex
+    justify-content: center
+    height: 80px
+    width: calc(50% - 6px)
+
+    @include tablet
+      height: 60px
+
+    &:hover
+      background: rgba($widget-color, 0.3)
+      border-color: rgba($widget-border, 0.3)
+
+    &_is-selected, &_is-selected:hover
+      background: $widget-color
+      border-color: $widget-border
+
+    @include tablet
+      margin-bottom: 24px
+      width: 100%
+
+  &__button-wrap
+    display: flex
+    justify-content: space-between
+
+  &__note-button
+    margin-left: 8px
+
+  &__bonus-button
+    height: 44px
+    margin: 16px 0
+
+    &__icon
+      margin-right: 8px
+
+  &__policy
+    margin: 16px 0
+    flex-wrap: wrap
+
+    @include mobile
+      flex-wrap: nowrap
