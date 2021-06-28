@@ -1,5 +1,7 @@
 # Form example for MTrading
 
+The project uploaded to Github Pages: https://mr-aibeck.github.io/mtrading-test/
+
 ## Available Scripts
 
 In the project directory, you can run:
@@ -26,4 +28,4 @@ Also you can build the app for production to deploy to Github Pages.
 
 ### `yarn deploy`
 
-And then you can deploy the app to Github Pages.
+And then you can deploy the app to Github Pages and see result here https://mr-aibeck.github.io/mtrading-test/
