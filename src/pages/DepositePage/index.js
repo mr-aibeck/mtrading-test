@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react'
+import React, { useState } from 'react'
 import { withRouter, useHistory } from "react-router-dom"
 import Select from '../../components/Select'
 import Input from '../../components/Input'
