@@ -12,9 +12,9 @@ function App() {
   return (
     <div className="app">
       <div className="content">
-        <Router>
+        <Router basename="/mtrading">
           <Switch>
-            <Route exact path="/">
+            <Route exact path="/deposit">
               <DepositePage />
             </Route>
             <Route path="/success">
